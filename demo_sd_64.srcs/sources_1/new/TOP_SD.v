@@ -281,7 +281,7 @@ always @(posedge user_clk_out or posedge sys_reset_out) begin
 					rd_state 			<= 8'h01;
 				end
 				Rx_Cnt					<= 16'd0;
-				Rx_flage 				<= 1'b1;
+				Rx_flage 				<= 1'b0;
 			end
 			8'h02 : begin
 				if(m_axi_rx_tvalid) begin
@@ -447,6 +447,7 @@ demo_test_0 demo_test_hls (
   .fdataOutCtrl_2(fdataOutCtrl[2]),                // output wire [31 : 0] fdataOutCtrl_2
   .fdataOutCtrl_3(fdataOutCtrl[3])                 // output wire [31 : 0] fdataOutCtrl_3
 );
+
 
 
 
